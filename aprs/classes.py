@@ -133,8 +133,8 @@ class Callsign(object):
         self.digi: bool = digi
 
     def __repr__(self) -> str:
-        _callsign = self.callsign.decode()
-        _ssid = self.ssid.decode()
+        _callsign = self.callsign#.decode("utf-8")
+        _ssid = self.ssid#.decode("utf-8")
         call_repr = _callsign
 
         # Don't print callsigns with ssid 0.
